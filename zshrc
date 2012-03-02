@@ -33,7 +33,10 @@ plugins=(git bundler rails3 rvm gem)
 
 # Use RVM
 [[ -s "/Users/donaldcrowe/.rvm/scripts/rvm" ]] && source "/Users/donaldcrowe/.rvm/scripts/rvm"
+# Add RVM to PATH for scripting
+export PATH=$PATH:$HOME/.rvm/bin
 
+# Load Oh My Zsh plugins / themes.
 source $ZSH/oh-my-zsh.sh
 
 # Basic path setup.
@@ -41,3 +44,7 @@ export PATH=$PATH:/usr/local/sbin::~/bin
 
 # Use textmate as default editor.
 export EDITOR="mate -w"
+
+# MySQL Setup
+export PATH=$PATH:/usr/local/mysql/bin
+export DYLD_LIBRARY_PATH=/usr/local/mysql/lib:$DYLD_LIBRARY_PATH
